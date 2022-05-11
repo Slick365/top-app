@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import { Button, Htag, Paragraph as P, Rating, Tag } from '../components';
+import { withLayout } from '../layout/Layout';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
@@ -23,4 +24,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default withLayout(Home);
