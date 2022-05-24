@@ -22,6 +22,7 @@ export const Rating = ({
     const updateArray = ratingArray.map((r: JSX.Element, i: number) => {
       return (
         <span
+          key={i}
           className={cn(style.star, {
             [style.filled]: i < currentRating,
             [style.editable]: isEditable,
