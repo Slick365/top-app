@@ -22,11 +22,7 @@ function Home({ menu }: HomeProps) {
         Small tag
       </Tag>
       <Rating rating={4} isEditable />
-      <ul>
-        {menu.map((m) => (
-          <li key={m._id.secondCategory}>{m._id.secondCategory}</li>
-        ))}
-      </ul>
+      <ul></ul>
     </>
   );
 }
