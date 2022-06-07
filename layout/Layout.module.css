@@ -30,7 +30,7 @@
 @media (max-width: 765px) {
   .sidebar {
     grid-area: sidebar;
-    display: none;
+    display: none !important;
   }
   .header {
     grid-area: header;

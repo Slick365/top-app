@@ -14,12 +14,24 @@ import {
   TopPageModel,
 } from '../../interfaces/top-page.interface';
 import { withLayout } from '../../layout/Layout';
+import { TopPageComponent } from '../../page-component';
 
-function Course({ menu, page, products }: CourseProps): JSX.Element {
-  return <>{products.length}</>;
+function TopPage({
+  menu,
+  page,
+  products,
+  firstCategory,
+}: TopPageProps): JSX.Element {
+  return (
+    <TopPageComponent
+      firstCategory={firstCategory}
+      page={page}
+      products={products}
+    />
+  );
 }
 
-export default withLayout(Course);
+export default withLayout(TopPage);
 
 export const getStaticPaths: GetStaticPaths = async () => {
   let paths: string[] = [];
@@ -89,7 +101,7 @@ export async function getStaticProps({
   }
 }
 
-interface CourseProps extends Record<string, unknown> {
+interface TopPageProps extends Record<string, unknown> {
   menu: MenuItem[];
   firstCategory: TopLevelCategory;
   page: TopPageModel;
